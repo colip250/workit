@@ -1,0 +1,299 @@
+@keyframes moveInLeft {
+  0% {
+    transform: translate(-500px, -100px) scale(0) rotate(-90deg);
+    opacity: 0; }
+  50% {
+    transform: translate(-25px, 10px) scale(0.25) rotate(45);
+    opacity: .5; }
+  100% {
+    transform: translate(0) scale(1) rotate(0);
+    opacity: 1; } }
+
+@keyframes moveInRight {
+  0% {
+    transform: translate(500px, -100px) scale(0) rotate(90deg);
+    opacity: 0; }
+  50% {
+    transform: translate(25px, 10px) scale(0.25) rotate(45);
+    opacity: .5; }
+  100% {
+    transform: translate(0) scale(1) rotate(0);
+    opacity: 1; } }
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(200px) scale(0.5);
+    opacity: 0; }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1; } }
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0; }
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0; }
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth; }
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5; }
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto; }
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block; }
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit; }
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important; } }
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; }
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 400; }
+
+.heading-1, .heading-2, .heading-3 {
+  font-family: "Fraunces", serif;
+  font-weight: 600; }
+
+.heading-1 {
+  color: #fff;
+  font-size: 80px;
+  line-height: 1; }
+  .heading-1--underline {
+    text-decoration: underline #42ffa1 3px;
+    text-underline-offset: 10px; }
+
+.heading-2 {
+  font-size: 56px;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 32px; }
+
+.heading-3 {
+  font-size: 32px;
+  line-height: 1.1;
+  padding-bottom: 28px;
+  color: #24053d; }
+
+.btn {
+  border: 2px solid transparent;
+  border-radius: 0;
+  background-color: #42ffa1;
+  color: #24053d;
+  font-size: inherit;
+  font-weight: 700;
+  padding: 12px 32px;
+  cursor: pointer;
+  margin-top: 35px;
+  display: inline-block;
+  box-sizing: border-box;
+  transition: all .2s; }
+  .btn:hover {
+    background-color: transparent;
+    border: solid 2px #42ffa1;
+    color: #42ffa1; }
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 56px; }
+  .navigation__logo {
+    height: 25px; }
+  .navigation__btn {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    color: #fff;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    text-decoration: underline #42ffa1 3px;
+    text-underline-offset: 10px;
+    cursor: pointer;
+    transition: all .2s; }
+    .navigation__btn:hover {
+      color: #42ffa1; }
+
+.content-container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; }
+
+.three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 26px; }
+
+.cta {
+  padding-top: 110px;
+  padding-bottom: 60px;
+  position: relative; }
+  .cta:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .cta__img {
+    width: 475px;
+    position: absolute;
+    z-index: -1; }
+  .cta__content {
+    max-width: 730px;
+    background-color: #24053d;
+    float: right;
+    margin-top: 175px;
+    padding: 64px;
+    position: relative; }
+  .cta__text {
+    color: #fff; }
+  .cta__decoration {
+    position: absolute;
+    right: 72px;
+    bottom: -60px; }
+
+.curved {
+  width: 100%; }
+  .curved--purple {
+    fill: #24053d; }
+  .curved--light {
+    fill: #fdfaff; }
+
+.features {
+  position: relative;
+  padding-top: 250px;
+  padding-bottom: 170px; }
+  .features::after {
+    content: '';
+    background: #fdfaff;
+    position: absolute;
+    bottom: 0;
+    height: 1000px;
+    width: 3000px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2; }
+
+.feature-box {
+  text-align: center; }
+  .feature-box__number {
+    color: #24053d;
+    font-family: "Fraunces", serif;
+    font-size: 24px;
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    border: 1px solid #574c61;
+    border-radius: 50%;
+    line-height: 56px;
+    margin-bottom: 56px; }
+  .feature-box__content {
+    color: #24053d; }
+
+.footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 110px; }
+  .footer__logo {
+    height: 25px;
+    margin-bottom: 60px; }
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 28px; }
+  .social__item {
+    display: inline-block;
+    fill: #574c61;
+    cursor: pointer;
+    transition: all .2s; }
+    .social__item:hover {
+      fill: #24053d; }
+
+.header {
+  height: 730px;
+  width: 100%;
+  position: relative; }
+  .header__content {
+    width: 60%;
+    margin: 55px auto;
+    text-align: center; }
+  .header__img {
+    width: 760px;
+    margin: 0 auto;
+    animation: moveUp 1s 1s cubic-bezier(0.6, 0.5, 0.25, 0.9);
+    animation-fill-mode: both; }
+  .header__decoration--1 {
+    position: absolute;
+    top: 115px;
+    left: -300px;
+    animation: moveInLeft 1s cubic-bezier(0.1, 0.5, 0.3, 0.3); }
+  .header__decoration--2 {
+    position: absolute;
+    top: 315px;
+    right: -200px;
+    animation: moveInRight 1s 0.2s cubic-bezier(0.1, 0.5, 0.3, 0.3);
+    animation-fill-mode: both; }
+  .header::after {
+    content: '';
+    background: #24053d;
+    position: absolute;
+    bottom: 0;
+    height: 1000px;
+    width: 3000px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1; }
